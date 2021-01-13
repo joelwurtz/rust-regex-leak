@@ -1,0 +1,17 @@
+[package]
+name = "rust-regex-leak-repro"
+version = "0.1.0"
+authors = ["Joel Wurtz <jwurtz@jolicode.com>"]
+edition = "2018"
+build = "src/build.rs"
+
+[lib]
+name = "rustregexleakrepro"
+crate-type = ["staticlib"]
+
+[build-dependencies]
+cbindgen="0.9.1"
+
+[dependencies]
+regex = "1.4.3"
+libc = "0.2.53"
